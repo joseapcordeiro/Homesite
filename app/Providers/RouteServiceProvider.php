@@ -23,6 +23,9 @@ class RouteServiceProvider extends ServiceProvider {
 	public function boot(Router $router)
 	{
 		parent::boot($router);
+		
+		// fix all ids to be the numberic
+		$router->pattern('id', '[0-9]+');
 
 		//
 	}
